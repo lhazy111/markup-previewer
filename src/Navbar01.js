@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 import './App.css';
 import { Navbar, Nav, Form } from 'react-bootstrap'
+import HowTo from './HowTo';
 
 export class Navbar01 extends Component {
     handleClick(e) {
         console.log('clicked switch')
         document.body.classList.toggle('night-mode');
         document.getElementById('editor').classList.toggle('night-mode');
+        console.log(document.getElementById('editor'))
     }
     render() {
         return (
-            <Navbar expand="lg" id="navbar" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">&lt;_Lou/&gt;</Navbar.Brand>
+            <Navbar expand="lg" id="navbar" bg="dark" variant="dark" sticky="top">
+                <Navbar.Brand href="#editor-main">&lt;_Lou/&gt;</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
+                        <Nav.Link href="#editor-main">Home</Nav.Link>
+                        <HowTo />
                         <Form className="d-flex">
                             <Form.Check
                                 onClick={this.handleClick}

@@ -8,7 +8,7 @@ export class OutputP extends Component {
             <div>
                 <Container>
                     <div className="text-center ">
-                        <label for="preview">Preview</label>
+                        <label>Preview</label>
                         <div className="text-break text-left img-fluid" id="preview" dangerouslySetInnerHTML={this.props.text_output} />
                     </div>
                 </Container>

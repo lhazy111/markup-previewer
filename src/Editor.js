@@ -12,9 +12,9 @@ import Col from 'react-bootstrap/Col'
 
 export class Editor extends Component {
     state = {
-        text_input: `# This is header1\n## This is header2`
-
+        text_input: "# Heading1 \n## Heading2 \n[link](https://www.freecodecamp.com) \ncode `<div></div>` \n```\nmulti \nline \ncode\n``` \n-lists\n-unordered \n1. and numbered\n1. aswell\n> Block Quotes!\n**bold text**\nand image ![React Logo w/ Text](https://goo.gl/Umyytc)"
     }
+
     handleChange = (e) => {
         this.setState({ text_input: e.target.value });
     }
@@ -28,7 +28,7 @@ export class Editor extends Component {
         return (
 
             <div className="Editor container-fluid">
-                <Container fluid>
+                <Container fluid id="editor-main">
                     <Row className="justify-content-center bg-secondary rounded shadow mt-3">
                         <h3 className=" text-light">Markup previewer</h3>
                     </Row>
