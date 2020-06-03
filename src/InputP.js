@@ -1,28 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container'
 
 
-export class InputP extends Component {
-
-    render() {
-        return (
-            <div>
-                <Container className="text-center">
-                    <div className="form-group">
-                        <label>Editor</label>
-                        <textarea
-                            className="form-control"
-                            id="editor"
-                            rows="20"
-                            onChange={this.props.change}
-                            value={this.props.text_output.text_input}
-                        ></textarea>
-                    </div>
-                </Container>
-
-            </div>
-        )
-    }
+export default function InputP(props) {
+    return (
+        <div>
+            <Container className="text-center">
+                <div className="form-group">
+                    <label>Editor</label>
+                    <textarea
+                        className="form-control"
+                        id="editor"
+                        rows="20"
+                        onChange={props.change}
+                        value={props.text_output}
+                    >
+                    </textarea>
+                </div>
+            </Container>
+        </div>
+    )
 }
 
-export default InputP
+

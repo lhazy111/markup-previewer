@@ -36,7 +36,7 @@ export class Editor extends Component {
                 <Container>
                     <Row className="mt-4">
                         <Col md={6} className="shadow rounded p-3">
-                            <InputP text_output={this.state} change={this.handleChange} />
+                            <InputP text_output={this.state.text_input} change={this.handleChange} />
                         </Col>
                         <Col md={6} className="shadow rounded p-3">
                             <OutputP text_output={this.markdown()} />

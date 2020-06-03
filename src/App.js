@@ -1,12 +1,16 @@
 import React from 'react';
-import Main from './Main';
 import './App.css';
+import Navbar01 from './Navbar01';
+import Editor from './Editor';
 
 ;
 function App() {
   return (
     <div className="App">
-      <Main />
+      <div className="Main" id="home">
+        <Navbar01 />
+        <Editor />
+      </div>
     </div>
   );
 }

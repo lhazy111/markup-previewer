@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Button, Modal, Nav } from 'react-bootstrap'
 import './App.css';
 
-
 export default function HowTo() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);

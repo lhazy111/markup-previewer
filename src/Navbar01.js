@@ -3,7 +3,7 @@ import './App.css';
 import { Navbar, Nav, Form } from 'react-bootstrap'
 import HowTo from './HowTo';
 
-export class Navbar01 extends Component {
+class Navbar01 extends Component {
     handleClick(e) {
         document.body.classList.toggle('night-mode');
         document.getElementById('editor').classList.toggle('night-mode');
