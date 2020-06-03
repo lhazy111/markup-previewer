@@ -7,18 +7,19 @@ export default function HowTo() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const bgClass = document.body.classList.contains('night-mode') ? "night-mode" : null
     return (
         <>
             <Nav.Link onClick={handleShow}>
                 Instruction
             </Nav.Link>
 
-            <Modal show={show} onHide={handleClose} id="modal" className="day">
-                <Modal.Header closeButton>
+            <Modal show={show} onHide={handleClose} id="modal">
+                <Modal.Header closeButton className={bgClass}>
                     <Modal.Title>Markup explained</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <div># - Heading1</div>
+                <Modal.Body className={bgClass}>
+                    <div ># - Heading1</div>
                     <div>##  - Heading2</div>
                     <div>link - [link](https://www.freecodecamp.com)</div>
                     <div>code -  `code code`</div>
@@ -29,7 +30,7 @@ export default function HowTo() {
                     <div>**bold text**</div>
                     <div>image ![React Logo w/ Text](https://goo.gl/Umyytc)</div>
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer className={bgClass}>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
           </Button>

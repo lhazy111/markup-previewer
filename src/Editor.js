@@ -26,12 +26,14 @@ export class Editor extends Component {
 
     render() {
         return (
+            <>
 
-            <div className="Editor container-fluid">
                 <Container fluid id="editor-main">
-                    <Row className="justify-content-center bg-secondary rounded shadow mt-3">
+                    <Row className="justify-content-center bg-secondary  shadow">
                         <h3 className=" text-light">Markup previewer</h3>
                     </Row>
+                </Container>
+                <Container>
                     <Row className="mt-4">
                         <Col md={6} className="shadow rounded p-3">
                             <InputP text_output={this.state} change={this.handleChange} />
@@ -41,7 +43,7 @@ export class Editor extends Component {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            </>
         )
     }
 }

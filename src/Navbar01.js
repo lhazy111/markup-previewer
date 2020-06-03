@@ -5,10 +5,8 @@ import HowTo from './HowTo';
 
 export class Navbar01 extends Component {
     handleClick(e) {
-        console.log('clicked switch')
         document.body.classList.toggle('night-mode');
         document.getElementById('editor').classList.toggle('night-mode');
-        console.log(document.getElementById('editor'))
     }
     render() {
         return (
@@ -17,7 +15,7 @@ export class Navbar01 extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#editor-main">Home</Nav.Link>
+                        <Nav.Link href="#home">Home</Nav.Link>
                         <HowTo />
                         <Form className="d-flex">
                             <Form.Check
